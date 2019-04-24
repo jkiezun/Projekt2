@@ -1,7 +1,7 @@
-#ifndef _EMPLOYEE_
-#define _EMPLOYEE__
+#ifndef _EMPLOYEES_
+#define _EMPLOYEES_
 #include <string>
-template <class Typ>
+template <typename Typ>
 class Employee
 {
 private:

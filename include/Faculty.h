@@ -2,8 +2,8 @@
 #define _FACULTY_
 #include <string>
 #include <vector>
-#include "student.h"
-#include "employee.h"
+#include "Student.h"
+#include "Employee.h"
 
 class Faculty
 {

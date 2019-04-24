@@ -2,7 +2,7 @@
 #define _UNIVERSITY_
 #include <string>
 #include <vector>
-#include "faculty.h"
+#include "Faculty.h"
 
 class University
 {

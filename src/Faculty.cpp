@@ -1,10 +1,10 @@
-#include "faculty.h"
+#include "Faculty.h"
 Faculty::Faculty(std::string Name){
-    name=Name;
+    this->name=Name;
 }
 std::string Faculty::get_name(){
     return name;
 }
 void Faculty::set_name(std::string Name){
-    name=Name;
+    this->name=Name;
 }
