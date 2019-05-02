@@ -46,3 +46,5 @@ template <typename Typ>
 void Employee<Typ>::set_solary(Typ Solary){
     this->solary=Solary;
 }
+template class Employee<int>;
+template class Employee<short int>;

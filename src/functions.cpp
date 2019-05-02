@@ -14,3 +14,6 @@ void show_employee(std::string name, std::string surname, T solary, short int co
     cout<<"To jest pracownik : "<<name<<" "<<surname<<endl;
     cout<<"Ma on/ona "<<count_of_publication<<" publikacji i otrzymuje wypłatę w wyskości "<<solary<<" zł"<<endl;
 }
+
+template void show_employee<int>(std::string name, std::string surname, int solary, short int count_of_publication);
+template void show_employee<short int>(std::string name, std::string surname, short int solary, short int count_of_publication);
