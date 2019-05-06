@@ -11,7 +11,7 @@ void Faculty::set_name(std::string Name){
     this->name=Name;
 }
 void Faculty::show_list_of_employyes_1(){
-    
+    cout<<"Lista pracowników wydziału: "<<this->get_name()<<" z wypłatą typu short int"<<endl;
     int number=1;
     for(auto i =list_of_employees_1.begin(); i!=list_of_employees_1.end(); ++i){
         cout<<"Pracownik nr:"<<number<<endl;
@@ -23,6 +23,7 @@ void Faculty::show_list_of_employyes_1(){
     }
 }
 void Faculty::show_list_of_employyes_2(){
+    cout<<"Lista pracowników wydziału: "<<this->get_name()<<" z wypłatą typu int"<<endl;
     int number=1;
     for(auto i =list_of_employees_2.begin(); i!=list_of_employees_2.end(); ++i){
         cout<<"Pracownik nr:"<<number<<endl;
@@ -34,6 +35,7 @@ void Faculty::show_list_of_employyes_2(){
     }
 }
 void Faculty::show_list_of_students(){
+    cout<<"Lista studentów wydziału: "<<this->get_name()<<endl;
     int number=1;
     for(auto i =list_of_students.begin(); i!=list_of_students.end(); ++i){
         

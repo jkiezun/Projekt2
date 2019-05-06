@@ -51,9 +51,11 @@ int main(){
     cout<<endl;
     facul.add_student(*stu);
     facul.show_list_of_students();
+    
 
     University uni;
     uni.set_name("Politechnika");
+    uni.add_new_faculty("Fizyka");
     uni+facul;
     uni.show_list_of_faculties();
 

@@ -16,6 +16,8 @@ public:
 
     std::string get_name();
     void set_name(std::string Name);
+    void add_new_faculty(std::string Name);
+    void add_faculty(Faculty faculty);
     void operator+(Faculty);
     void show_list_of_faculties();
 };
