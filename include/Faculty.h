@@ -19,8 +19,8 @@ public:
     Faculty(std::string Name);
     ~Faculty(){};
 
-    void show_list_of_employyes_1();
-    void show_list_of_employyes_2();
+    void show_list_of_employees_1();
+    void show_list_of_employees_2();
     void show_list_of_students();
     std::string get_name();
     void set_name(std::string Name);
