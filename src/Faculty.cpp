@@ -12,39 +12,36 @@ void Faculty::set_name(std::string Name){
 }
 void Faculty::show_list_of_employees_1(){
     cout<<"Lista pracowników wydziału: "<<this->get_name()<<" z wypłatą typu short int"<<endl;
-    int number=1;
     for(auto i =list_of_employees_1.begin(); i!=list_of_employees_1.end(); ++i){
-        cout<<"Pracownik nr:"<<number<<endl;
+        cout<<"Pracownik nr:"<<(int)(i-list_of_employees_1.begin())+1<<endl;
         cout<<"Imię: "<<i->get_name()<<endl;
         cout<<"Nazwisko: "<<i->get_surname()<<endl;
         cout<<"Zarabia: "<<i->get_salary()<<" zl"<<endl;
         cout<<"Ma "<<i->get_count_of_publication()<<" publikacji"<<endl;
-        ++number;
+
     }
 }
 void Faculty::show_list_of_employees_2(){
     cout<<"Lista pracowników wydziału: "<<this->get_name()<<" z wypłatą typu int"<<endl;
-    int number=1;
     for(auto i =list_of_employees_2.begin(); i!=list_of_employees_2.end(); ++i){
-        cout<<"Pracownik nr:"<<number<<endl;
+        cout<<"Pracownik nr:"<<(int)(i-list_of_employees_2.begin())+1<<endl;
         cout<<"Imię: "<<i->get_name()<<endl;
         cout<<"Nazwisko: "<<i->get_surname()<<endl;
         cout<<"Zarabia: "<<i->get_salary()<<" zl"<<endl;
         cout<<"Ma "<<i->get_count_of_publication()<<" publikacji"<<endl;
-        ++number;
+
     }
 }
 void Faculty::show_list_of_students(){
     cout<<"Lista studentów wydziału: "<<this->get_name()<<endl;
-    int number=1;
     for(auto i =list_of_students.begin(); i!=list_of_students.end(); ++i){
-        
-        cout<<"Student nr:"<<number<<endl;
+
+        cout<<"Student nr:"<<(int)(i-list_of_students.begin())+1<<endl;
         cout<<"Imię: "<<i->get_name()<<endl;
         cout<<"Nazwisko: "<<i->get_surname()<<endl;
         cout<<"Jest na  "<<i->get_year()<<" roku"<<endl;
         cout<<"Ma "<<i->get_ECTS()<<" punktów ECTS "<<endl;
-        ++number;
+
     }
 }
 void Faculty::add_short_employee(Employee<short int> employee){
