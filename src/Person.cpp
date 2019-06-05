@@ -33,7 +33,7 @@ void Person::set_surname(std::string surname) {
         this->surname = surname;
     }
     catch (const char* h) {
-        std::cerr<<"ERROR: "<<h<<"\n"; 
+        std::cerr<<"ERROR: "<<h<<"\n\n"; 
     }
 }
 void Person::print_info() {
