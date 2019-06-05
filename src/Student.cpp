@@ -1,23 +1,16 @@
 #include "Student.h"
 #include <string>
-Student::Student(){
-    this->name="Jan";
-    this->surname="Kowalski";
-    this->yearOfCollege=0;
-    this->ECTSpoints=0;
+#include <iostream>
+Student::Student() : Person() {
+    this->yearOfCollege = 0;
+    this->ECTSpoints = 0;
 }
-Student::Student(std::string name, std::string surname, int year, int ECTS){
-    this->name=name;
-    this->surname=surname;
-    this->yearOfCollege=year;
-    this->ECTSpoints=ECTS;
-}
-std::string Student::get_name(){
-   return name;
 
+Student::Student(std::string name, std::string surname, int year, int ECTS) : Person(name, surname), yearOfCollege(year), ECTSpoints(ECTS) {
 }
-std::string Student::get_surname(){
-    return surname;
+
+Student::~Student() {
+    
 }
 int Student::get_year(){
    return yearOfCollege;
@@ -25,17 +18,28 @@ int Student::get_year(){
 int Student::get_ECTS(){
   return ECTSpoints;
 }
-void Student::set_name(std::string name){
-    this->name=name;
-}
-void Student::set_surname(std::string surname){
-    this->surname=surname;
-}
 void Student::set_year(int year){
-    this->yearOfCollege=year;
+    try {
+        if (yearOfCollege < 1)
+            throw "Year of college can't be lower than 1.";
+        this->yearOfCollege=yearOfCollege;
+    }
+    catch (const char* e) {
+        std::cerr<<"ERROR: "<<e;
+    }
 }
 void Student::set_ECTS(int ECTS){
-    this->ECTSpoints=ECTS;
+    try {
+        if (ECTS < 0)
+            throw "ECTS can't be lower than 0.";
+        this->ECTSpoints=ECTS;
+    }
+    catch (const char* e) {
+        std::cerr<<"ERROR: "<<e;
+    }
 }
-
+void Student::print_info() {
+    std::cout<<"STUDENT'S INFORMATION\n";
+    std::cout<<"Name: "<<this->get_name()<<", Surname: "<< this->get_surname()<<", Year of college: "<<this->get_year()<<", ECTS: "<<this->get_ECTS()<<"\n\n";
+}
    
