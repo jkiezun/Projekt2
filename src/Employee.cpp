@@ -25,11 +25,11 @@ short int Employee <Typ>::get_count_of_publication(){
 }  
 
 template <typename Typ> 
-void Employee<Typ>::set_count_of_publication(short int Count_of_publication){
+void Employee<Typ>::set_count_of_publication(short int count){
     try {
-        if (count_of_publication < 0)
-            throw "Count of publications can't be lower than 0.";
-        this->count_of_publication=count_of_publication;
+        if (count < 0)
+            throw "Count of publications can't be lower than 0.\n";
+        this->count_of_publication=count;
     }
     catch (const char* e) {
         std::cerr<<"ERROR: "<<e;
@@ -39,7 +39,7 @@ template <typename Typ>
 void Employee<Typ>::set_salary(Typ salary){
     try {
         if (salary < 0)
-            throw "Salary can't be lower than 0.";
+            throw "Salary can't be lower than 0.\n";
         this->salary=salary;
     }
     catch (const char* e) {

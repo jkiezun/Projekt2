@@ -17,6 +17,8 @@ int main() {
     show_student(stu->get_name(), stu->get_surname(),stu->get_ECTS(), stu->get_year());
     stu->print_info();
     cout<<endl;
+    stu->set_ECTS(-1);
+    stu->set_year(0);
 
     Employee <int> emp;
     emp.set_name("Barbara");
@@ -32,21 +34,24 @@ int main() {
     emp3.set_salary(1300);
     emp3.set_count_of_publication(2);
     emp3.print_info();
-    
-    Employee <int> *emp2 = new Employee<int>;
+    emp3.set_salary(-200);
+    emp3.set_count_of_publication(-1);
 
     Person person1;
     person1.set_name("Josh");
     person1.set_surname("Bostic");
     person1.print_info();
 
-    University uni;
-    uni.set_name("Politechnika");
-    uni.add_new_faculty("Fizyka");
-    uni.show_list_of_faculties();
+    Person *emp2 = new Employee<int>("Jan", "Pawlak", 2000, 3);
+    emp2->print_info();
+    
 
+	Person *stu2 = new Student("Marek", "Janiak", 4, 30);
+	stu2->print_info();
+	
     delete stu;
-    delete emp2;
- 
+	delete emp2;
+	delete stu2;
+	
     return 0;
 }

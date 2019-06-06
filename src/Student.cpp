@@ -19,9 +19,9 @@ int Student::get_ECTS(){
 }
 void Student::set_year(int year){
     try {
-        if (yearOfCollege < 1)
-            throw "Year of college can't be lower than 1.";
-        this->yearOfCollege=yearOfCollege;
+        if (year < 1)
+            throw "Year of college can't be lower than 1.\n";
+        this->yearOfCollege=year;
     }
     catch (const char* e) {
         std::cerr<<"ERROR: "<<e;
@@ -30,7 +30,7 @@ void Student::set_year(int year){
 void Student::set_ECTS(int ECTS){
     try {
         if (ECTS < 0)
-            throw "ECTS can't be lower than 0.";
+            throw "ECTS can't be lower than 0.\n";
         this->ECTSpoints=ECTS;
     }
     catch (const char* e) {

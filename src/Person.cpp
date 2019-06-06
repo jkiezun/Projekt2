@@ -19,7 +19,7 @@ std::string Person::get_surname() {
 void Person::set_name(std::string name) {
     try {
         if (name.length() == 0)
-            throw "Name can't be empty!";
+            throw "Name can't be empty!\n";
         this->name = name;
     }
     catch (const char* h) {
@@ -29,7 +29,7 @@ void Person::set_name(std::string name) {
 void Person::set_surname(std::string surname) {
     try {
         if (surname.length() == 0)
-            throw "Surname can't be empty!";
+            throw "Surname can't be empty!\n";
         this->surname = surname;
     }
     catch (const char* h) {
