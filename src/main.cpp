@@ -25,12 +25,6 @@ int main() {
     emp.set_count_of_publication(222);
     emp.print_info();
 
-    Employee <short int> *emp2 = new Employee<short int>;
-    emp2->set_name("Jan");
-    emp2->set_surname("Nowak");
-    emp2->set_salary(1300);
-    emp2->set_count_of_publication(2);
-    emp2->print_info();
     
     Employee <int> emp3;
     emp3.set_name("Jan");
@@ -38,9 +32,11 @@ int main() {
     emp3.set_salary(1300);
     emp3.set_count_of_publication(2);
     emp3.print_info();
- 
+    
+    Employee <int> *emp2 = new Employee<int>;
+
     Person person1;
-    person1.set_name("");
+    person1.set_name("Josh");
     person1.set_surname("Bostic");
     person1.print_info();
 
@@ -51,8 +47,6 @@ int main() {
 
     delete stu;
     delete emp2;
-    
-
-    cout<<"--------------------------------------------------\n";
+ 
     return 0;
 }

@@ -10,7 +10,7 @@ private:
 public:
     Student();
     Student(std::string name, std::string surname, int year, int ECTS);
-    ~Student();
+    virtual ~Student();
 
 
     int get_year();

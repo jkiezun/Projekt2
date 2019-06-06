@@ -12,7 +12,7 @@ private:
 public:
     Employee();
     Employee(std::string Name, std::string Surname, Typ salary, short int Count_of_publication);
-    ~Employee();
+    virtual ~Employee();
 
     Typ get_salary();
     short int get_count_of_publication();

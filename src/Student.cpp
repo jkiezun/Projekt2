@@ -10,7 +10,6 @@ Student::Student(std::string name, std::string surname, int year, int ECTS) : Pe
 }
 
 Student::~Student() {
-    
 }
 int Student::get_year(){
    return yearOfCollege;

@@ -9,7 +9,7 @@ private:
 public:
     Person();
     Person(std::string name, std::string surname);
-    ~Person();
+    virtual ~Person();
 
     std::string get_name();
     std::string get_surname();

@@ -13,7 +13,6 @@ Employee <Typ>::Employee(std::string name, std::string surname, Typ salary, shor
 
 template <typename Typ>
 Employee <Typ>::~Employee() {
-    std::cout<<"Employee destroyed";
 }
 
 template <typename Typ> 
